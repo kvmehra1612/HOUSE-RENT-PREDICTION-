@@ -6,21 +6,21 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error
 
-# # Load the dataset
-# df = pd.read_csv('/content/house_rent_dataset_with_20_nulls.csv')
+# Load the dataset
+df = pd.read_csv('house_rent_dataset_with_20_nulls.csv')
 
-# # Display first few rows
-# print("First 5 rows of the dataset:")
-# print(df.head())
+# Display first few rows
+print("First 5 rows of the dataset:")
+print(df.head())
 
-# # Check for missing values
-# print("\nMissing values in the dataset:")
-# print(df.isnull().sum())
+# Check for missing values
+print("\nMissing values in the dataset:")
+print(df.isnull().sum())
 
-# # Drop rows with null values (you can also use fillna() if preferred)
-# df = df.dropna()
+# Drop rows with null values (you can also use fillna() if preferred)
+df = df.dropna()
 
-# Plotting histogram of Area
+#Plotting histogram of Area
 plt.hist(df['Area (sqft)'], bins=10, edgecolor='black')
 plt.title('Area Distribution')
 plt.xlabel('Area (sqft)')
